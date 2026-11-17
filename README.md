@@ -120,7 +120,7 @@ Para configurar/instalar/usar o `shell_scripts`, siga os passos abaixo:
 4. Instalar o(s) pacote(s) abaixo no gerenciador `pip`:
 
     ```bash
-    python3.10 -m venv "~/.venvs/<nome_do_projeto>"  # Você também pode usar a versão do `python` como sendo
+    python3.10 -m venv "$HOME/.venvs/<nome_do_projeto>"  # Você também pode usar a versão do `python` como sendo
     # o nome do ambiente virtual, por exemplo: `python3.10env`
     ```
 
@@ -170,7 +170,7 @@ Para ativar um ambiente virtual no `Linux Ubuntu`, siga os passos abaixo:
 3. Ativar o ambiente virtual no `Linux Ubuntu`:
 
     ```bash
-    source "~/.venvs/<nome_do_projeto>/bin/activate"
+    source "$HOME/.venvs/<nome_do_projeto>/bin/activate"
     ```
 
     Perceber que, depois de `~/.venvs/<nome_do_projeto>`, existe a pasta
@@ -223,6 +223,42 @@ pacote(s).
     ```cmd
     pip install -r "{freeze_file_path}"
     ```
+
+## 2.5 Consultar se o ambiente virtual correto está ativo
+
+1. No `Linux Ubuntu`, execute os comandos abaixo depois de ativar o ambiente. Substitua `<nome_do_projeto>` pelo nome usado ao criar o ambiente em `~/.venvs/`.
+
+    ```bash
+    expected_venv="$HOME/.venvs/<nome_do_projeto>"
+
+    printf 'VIRTUAL_ENV=%s\n' "${VIRTUAL_ENV:-not defined}"
+    command -v python3
+    python3 -m pip --version
+
+    python3 - "$expected_venv" <<'PY'
+    import os
+    import sys
+
+    expected = os.path.realpath(os.path.expanduser(sys.argv[1]))
+    active = os.path.realpath(sys.prefix)
+    is_virtualenv = sys.prefix != sys.base_prefix
+    matches_expected = is_virtualenv and active == expected
+
+    print(f"Interpreter: {sys.executable}")
+    print(f"sys.prefix: {sys.prefix}")
+    print(f"Active virtual environment: {'yes' if is_virtualenv else 'no'}")
+    print(f"It's the expected environment: {'yes' if matches_expected else 'no'}")
+
+    raise SystemExit(0 if matches_expected else 1)
+    PY
+    ```
+
+    `command -v python3` mostra o interpretador encontrado no `PATH`, e 
+    `python3 -m pip --version` mostra qual instalação do `pip` será 
+    usada. A verificação em `Python` compara o ambiente ativo com o 
+    caminho esperado e termina com código `0` quando corresponde; caso 
+    contrário, termina com código `1`.
+
 
 ## Compatibilidade
 
