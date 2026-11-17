@@ -292,12 +292,12 @@ O registro associa um ambiente virtual já criado ao `Jupyter` para que ele poss
 
     Se o projeto tiver um arquivo `requirements.txt`, instale também as dependências do projeto conforme a Seção **2.4**.
 
-3. Com o ambiente ativado, registre-o como kernel. Neste exemplo, substitua `kepler` pelo nome do projeto e ajuste a versão exibida conforme a saída de `python --version`:
+3. Com o ambiente ativado, registre-o como kernel. Neste exemplo, substitua `<nome_do_projeto>` pelo nome do projeto e ajuste a versão exibida conforme a saída de `python --version`:
 
     ```bash
     python -m ipykernel install --user \
-        --name kepler \
-        --display-name "kepler (Python 3.10.12)"
+        --name <nome_do_projeto> \
+        --display-name "<nome_do_projeto> (Python 3.10)"
     ```
 
     O argumento `--name` define o identificador do kernel; `--display-name` define o nome mostrado no `Jupyter` e no `VS Code`. A opção `--user` registra o kernel para o usuário atual.
@@ -305,9 +305,9 @@ O registro associa um ambiente virtual já criado ao `Jupyter` para que ele poss
     Se não quiser ativar o ambiente antes, execute o mesmo registro com o caminho do interpretador desse ambiente:
 
     ```bash
-    "$HOME/.venvs/kepler/bin/python" -m ipykernel install --user \
-        --name kepler \
-        --display-name "kepler (Python 3.10.12)"
+    "$HOME/.venvs/<nome_do_projeto>/bin/python" -m ipykernel install --user \
+        --name <nome_do_projeto> \
+        --display-name "<nome_do_projeto> (Python 3.10)"
     ```
 
 4. Consulte os kernels registrados:
