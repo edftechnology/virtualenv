@@ -195,7 +195,7 @@ Para ativar um ambiente virtual no `Linux Ubuntu`, siga os passos abaixo:
 
 
 
-### 2.3.2 `Windows`
+#### 2.3.2 `Windows`
 
 Para ativar um ambiente virtual no `Windows`, siga os passoa abaixo:
 
@@ -214,10 +214,10 @@ Para ativar um ambiente virtual no `Windows`, siga os passoa abaixo:
 3. Ativar o ambiente virtual no `Windows`:
 
     ```cmd
-    C:\Users\venvs\Scripts\activate
+    C:\Users\<nome_do_usuario>\venvs\Scripts\activate
     ```
 
-## 2.4 Instalar as dependências a partir do arquivo `requirements.txt`
+### 2.4 Instalar as dependências a partir do arquivo `requirements.txt`
 
 **ATENÇÃO:** Executar o código abaixo somente se for instalar as
 dependências do ambiente virtual já criado. **NÂO** se assuste caso
@@ -242,7 +242,7 @@ pacote(s).
     pip install -r "{freeze_file_path}"
     ```
 
-## 2.5 Consultar se o ambiente virtual correto está ativo
+### 2.5 Consultar se o ambiente virtual correto está ativo
 
 1. No `Linux Ubuntu`, execute os comandos abaixo depois de ativar o ambiente. Substitua `<nome_do_projeto>` pelo nome usado ao criar o ambiente em `~/.venvs/`.
 
@@ -278,7 +278,7 @@ pacote(s).
     contrário, termina com código `1`.
 
 
-## 2.6 Registrar o ambiente virtual como kernel Jupyter
+### 2.6 Registrar o ambiente virtual como _kernel_ `Jupyter`
 
 O registro associa um ambiente virtual já criado ao `Jupyter` para que ele possa executar células de notebooks `.ipynb` e apareça como opção de kernel no `VS Code`. O comando de registro não cria nem ativa o ambiente virtual. Para projetos que executam somente arquivos `.py`, esta etapa não é necessária.
 
