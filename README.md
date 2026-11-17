@@ -177,6 +177,26 @@ Para ativar um ambiente virtual no `Linux Ubuntu`, siga os passos abaixo:
     `~/.venvs` (caso você tenha optado por criá-la) e o comando
     `/bin/activate`
 
+4. Atualizar `pip`, `setuptools` e `wheel` no ambiente virtual ativo:
+
+    ```bash
+    python -m pip install --upgrade pip setuptools wheel
+    ```
+
+5. Verificar as versões instaladas:
+
+    ```bash
+    python -m pip show pip setuptools wheel
+    ```
+
+6. Verificar possíveis conflitos entre as dependências instaladas:
+
+    ```bash
+    python -m pip check
+    ```
+
+
+
 ### 2.3.2 `Windows`
 
 Para ativar um ambiente virtual no `Windows`, siga os passoa abaixo:
