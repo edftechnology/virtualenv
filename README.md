@@ -249,4 +249,6 @@ No Starch Press, 2019.
 
 [2] OPENAI.
 **Instalar o `virtualenv` no `linux ubuntu` pelo `terminal emulator`**.
-Disponível em: <https://chatgpt.com/c/69aedf3c-7c04-8331-8a36-66e1fc2bffa4>. ChatGPT. Acessado em: 10/03/2026.
+Disponível em: <https://chatgpt.com/c/69aedf3c-7c04-8331-8a36-66e1fc2bffa4>.
+ChatGPT.
+Acessado em: 10/mar/2026.
