@@ -79,13 +79,13 @@ Para configurar/instalar/usar o `shell_scripts`, siga os passos abaixo:
 3. Se quiser garantir que o `pip` esteja atualizado (boa prática):
 
     ```bash
-    python3 -m pip install --upgrade pip
+    python3.10 -m pip install --upgrade pip
     ```
 
 4. **Instalar o `virtualenv`**: Execute o comando:
 
     ```bash
-    python3 -m pip install virtualenv
+    python3.10 -m pip install virtualenv
     ```
 
 
@@ -284,7 +284,7 @@ pacote(s).
 
 O registro associa um ambiente virtual já criado ao `Jupyter` para que ele possa executar células de notebooks `.ipynb` e apareça como opção de kernel no `VS Code`. O comando de registro não cria nem ativa o ambiente virtual. Para projetos que executam somente arquivos `.py`, esta etapa não é necessária.
 
-1. Crie e ative o ambiente virtual conforme as Seções **2.1** e **2.3**. Antes de registrar, confirme que o interpretador correto está ativo seguindo a Seção **2.5**.
+1. Crie e ative o ambiente virtual conforme as Seções anteriores. Antes de registrar, confirme que o interpretador correto está ativo seguindo a Seção anterior.
 
 2. Instale o `ipykernel` dentro desse ambiente, caso ainda não esteja instalado:
 
