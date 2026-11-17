@@ -85,7 +85,7 @@ Para configurar/instalar/usar o `shell_scripts`, siga os passos abaixo:
 4. **Instalar o `virtualenv`**: Execute o comando:
 
     ```bash
-    python3 pip install -m virtualenv
+    python3 -m pip install virtualenv
     ```
 
 
@@ -114,14 +114,14 @@ Para configurar/instalar/usar o `shell_scripts`, siga os passos abaixo:
 3. Criar a pasta para `venvs` para ambientes virtuais (opcional):
 
     ```bash
-    mkdir -pv /venvs
+    mkdir -pv ~/.venvs
     ```
 
 4. Instalar o(s) pacote(s) abaixo no gerenciador `pip`:
 
     ```bash
-    python3.8 -m venv "<nome_do_projeto>/"  # Você também pode usar a versão do `python` como sendo
-    # o nome do ambiente virtual, por exemplo: `python3.8env`
+    python3.10 -m venv "~/.venvs/<nome_do_projeto>"  # Você também pode usar a versão do `python` como sendo
+    # o nome do ambiente virtual, por exemplo: `python3.10env`
     ```
 
 
@@ -170,11 +170,12 @@ Para ativar um ambiente virtual no `Linux Ubuntu`, siga os passos abaixo:
 3. Ativar o ambiente virtual no `Linux Ubuntu`:
 
     ```bash
-    source "/caminho/ate/o/projeto/venvs/bin/activate"
+    source "~/.venvs/<nome_do_projeto>/bin/activate"
     ```
 
-    Perceber que, depois de `/caminho/ate/o/projeto`, existe a pasta `/venvs` (caso você tenha
-    optado por criá-la) e o comando `/bin/activate`
+    Perceber que, depois de `~/.venvs/<nome_do_projeto>`, existe a pasta
+    `~/.venvs` (caso você tenha optado por criá-la) e o comando
+    `/bin/activate`
 
 ### 2.3.2 `Windows`
 
@@ -195,12 +196,15 @@ Para ativar um ambiente virtual no `Windows`, siga os passoa abaixo:
 3. Ativar o ambiente virtual no `Windows`:
 
     ```cmd
-    venvs\Scripts\activate
+    C:\Users\venvs\Scripts\activate
     ```
 
-## 2.4 Instalar as dependências a partir do arquivo requirements.txt
+## 2.4 Instalar as dependências a partir do arquivo `requirements.txt`
 
-**ATENÇÃO:** Executar o código abaixo somente se for instalar as dependências do ambiente virtual já criado. **NÂO** se assuste caso tenha executado este código, pois será verificado a(s) versão(ões) do(s) pacote(s).
+**ATENÇÃO:** Executar o código abaixo somente se for instalar as
+dependências do ambiente virtual já criado. **NÂO** se assuste caso
+tenha executado este código, pois será verificado a(s) versão(ões) do(s)
+pacote(s).
 
 1. Abrir o `Terminal`; Você pode fazer isso pressionando:
 
@@ -239,7 +243,10 @@ Para dúvidas ou problemas, abra uma issue no repositório do `GitHub`.
 
 # Referências
 
-[1] MATTHEUS, E.. **_Python Crash Course: A Hands-On, Project-Based Introduction to Programming (2nd ed.)_**. No Starch Press, 2019.
+[1] MATTHEUS, E..
+**Python Crash Course: A Hands-On, Project-Based Introduction to Programming (2nd ed.)**.
+No Starch Press, 2019.
 
-[2] OPENAI. ***Instalar o `virtualenv` no `linux ubuntu` pelo `terminal emulator`***. Disponível em: <https://chatgpt.com/c/69aedf3c-7c04-8331-8a36-66e1fc2bffa4>. ChatGPT. Acessado em: 10/03/2026.
-
+[2] OPENAI.
+**Instalar o `virtualenv` no `linux ubuntu` pelo `terminal emulator`**.
+Disponível em: <https://chatgpt.com/c/69aedf3c-7c04-8331-8a36-66e1fc2bffa4>. ChatGPT. Acessado em: 10/03/2026.
