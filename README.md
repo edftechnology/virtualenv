@@ -120,8 +120,6 @@ Para configurar/instalar/usar o `shell_scripts`, siga os passos abaixo:
 
     ```bash
     python3.10 -m venv "~/.venvs/<nome_do_projeto>" 
-    # Você também pode usar a versão do `python` como sendo o nome do 
-    # ambiente virtual, por exemplo: `python3.10env`
     ```
 
 ### 2.2 Congelar os pacotes de um projeto no arquivo `requirements.txt`
