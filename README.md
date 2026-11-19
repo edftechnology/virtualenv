@@ -119,7 +119,7 @@ Para configurar/instalar/usar o `shell_scripts`, siga os passos abaixo:
 4. Instalar o(s) pacote(s) abaixo no gerenciador `pip`:
 
     ```bash
-    python3.10 -m venv "$HOME/.venvs/<nome_do_projeto>"  # Você também pode usar a versão do `python` como sendo
+    python3.10 -m venv "~/.venvs/<nome_do_projeto>"  # Você também pode usar a versão do `python` como sendo
     # o nome do ambiente virtual, por exemplo: `python3.10env`
     ```
 
